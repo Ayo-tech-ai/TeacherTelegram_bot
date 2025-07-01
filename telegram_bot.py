@@ -1,4 +1,9 @@
-import logging import os import torch from transformers import AutoTokenizer, AutoModelForSeq2SeqLM from telegram import Update from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
+import logging
+import os
+import torch
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from telegram import Update
+from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 Load the model and tokenizer only once (same as Streamlit caching)
 
