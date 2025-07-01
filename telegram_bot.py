@@ -3,12 +3,12 @@ import os
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, filters
 
 # -----------------------------
-# Load the model and tokenizer only once
+# Load the smaller model for lower memory usage
 # -----------------------------
-model_name = "google/flan-t5-base"
+model_name = "google/flan-t5-small"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
