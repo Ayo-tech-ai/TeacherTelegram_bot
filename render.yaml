@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: telegram-question-bot
+    env: python
+    buildCommand: ""
+    startCommand: python telegram_bot.py
