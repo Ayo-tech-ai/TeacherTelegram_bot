@@ -7,7 +7,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 # -----------------------------
 # Load a lightweight, tiny T5 model
 # -----------------------------
-model_name = "sshleifer/tiny-t5"
+model_name = "google/flan-t5-xs"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 
